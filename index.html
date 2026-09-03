@@ -33,37 +33,29 @@
         .btn {
             background-color: #f2a93b;
             color: #2c221e;
-            padding: 12px 24px;
+            padding: 14px 28px;
             text-decoration: none;
             font-weight: bold;
-            border-radius: 6px;
+            border-radius: 8px;
             margin-top: 15px;
             display: inline-block;
+            font-size: 16px;
         }
     </style>
 </head>
 <body>
 
     <div class="spinner"></div>
-    <p>Opening Store in Browser...</p>
+    <p>Opening Store...</p>
 
-    <!-- Link m'qad l-Sellfy Direct -->
-    <a id="storeLink" class="btn" href="https://abd-mostarelaxingd.sellfy.store/p/baseball-9-0rox1d/">Click here to Buy</a>
+    <!-- Link m'qad b-target _self bash y-open f-nafs l-tab -->
+    <a id="storeLink" class="btn" href="https://abd-mostarelaxingd.sellfy.store/p/baseball-9-0rox1d/" target="_self">Click here to Open Store</a>
 
     <script type="text/javascript">
-        // 1. Direct URL dyal product Sellfy
-        var sellfyUrl = "https://abd-mostarelaxingd.sellfy.store/p/baseball-9-0rox1d/"; 
+        var sellfyUrl = "https://abd-mostarelaxingd.sellfy.store/p/baseball-9-0rox1d/";
 
-        // 2. Intent URL m'qad 100% BLA syntax errors f-Regex
-        var intentUrl = "intent://abd-mostarelaxingd.sellfy.store/p/baseball-9-0rox1d/#Intent;scheme=https;package=com.android.chrome;end";
-
-        // Try opening directly in Chrome
-        window.location.href = intentUrl;
-
-        // Fallback f-halat ma-fta7sh Chrome
-        setTimeout(function() {
-            window.location.replace(sellfyUrl);
-        }, 1500);
+        // Standard HTTPS redirect (No custom intent scheme)
+        window.location.replace(sellfyUrl);
     </script>
 
 </body>
