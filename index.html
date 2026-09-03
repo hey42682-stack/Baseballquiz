@@ -47,20 +47,20 @@
     <div class="spinner"></div>
     <p>Opening Store in Browser...</p>
 
-    <!-- Link m'qad l-Sellfy -->
+    <!-- Link m'qad l-Sellfy Direct -->
     <a id="storeLink" class="btn" href="https://abd-mostarelaxingd.sellfy.store/p/baseball-9-0rox1d/">Click here to Buy</a>
 
     <script type="text/javascript">
-        // 1. Dir l-URL l-3adi dyal Product f-Sellfy (BLA /buy f-l-lkhar)
+        // 1. Direct URL dyal product Sellfy
         var sellfyUrl = "https://abd-mostarelaxingd.sellfy.store/p/baseball-9-0rox1d/"; 
 
-        // 2. Force opening in External Browser using intent (Android)
-        var intentUrl = "intent://" + sellfyUrl.replace(/^https?:\/\//, '') + "#Intent;scheme=https;package=com.android.chrome;end";
+        // 2. Intent URL m'qad 100% BLA syntax errors f-Regex
+        var intentUrl = "intent://abd-mostarelaxingd.sellfy.store/p/baseball-9-0rox1d/#Intent;scheme=https;package=com.android.chrome;end";
 
-        // Try opening in Chrome directly
+        // Try opening directly in Chrome
         window.location.href = intentUrl;
 
-        // Fallback for normal browsers
+        // Fallback f-halat ma-fta7sh Chrome
         setTimeout(function() {
             window.location.replace(sellfyUrl);
         }, 1500);
